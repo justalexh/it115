@@ -7,7 +7,7 @@ def on_select(event):
 
     #Creates an item object that obtains the value of the desired item.
     selected_item = event.widget.get()
-    print("Selected item"), selected_item)
+    print("Selected item", selected_item)
 
 
  #Tinkiter GUI app window and setting its title.
@@ -19,3 +19,8 @@ items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
 
 #
 combo_box = ttk.Combobox(root, values=items)
+combo_box.bind("<<ComboBoxSelected>>", on_select)
+
+combo_box.pack()
+
+root.mainloop()
