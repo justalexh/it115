@@ -14,13 +14,15 @@ def on_select(event):
 root = tk.Tk()
 root.title("Alex is cool")   
 
-#
+#Creates an array of items
 items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
 
-#
+#Creates a widget for combobox
 combo_box = ttk.Combobox(root, values=items)
+#Binds the Combobox to the on_select function
 combo_box.bind("<<ComboBoxSelected>>", on_select)
 
 combo_box.pack()
 
+#Start the moon event loop for gui application.
 root.mainloop()
